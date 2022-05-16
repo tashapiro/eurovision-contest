@@ -94,8 +94,7 @@ for(i in by_year$event_link[by_year$year<2008 & by_year$year>2004]){
     html_elements("table")%>%
     html_attr("x-data")
   json<-substr(table,19,nchar(table)-3)
-  json<- gsub("\\\\","\\",json)
-  json<-str_replace_all(json,"u0022",'\\"')
+  json <- stringi::stri_unescape_unicode(json)
   data<-fromJSON(json)
   data<-data%>%unnest(c(participant, country))
   data$event_link<-i
@@ -111,8 +110,7 @@ for(i in by_year$event_link[by_year$year>=2008]){
     html_elements("table")%>%
     html_attr("x-data")
   json<-substr(table,19,nchar(table)-3)
-  json<- gsub("\\\\","\\",json)
-  json<-str_replace_all(json,"u0022",'\\"')
+  json <- stringi::stri_unescape_unicode(json)
   data<-fromJSON(json)
   data<-data%>%unnest(c(participant, country))
   data$event_link<-i
@@ -128,8 +126,7 @@ for(i in by_year$event_link[by_year$year>=2008]){
     html_elements("table")%>%
     html_attr("x-data")
   json<-substr(table,19,nchar(table)-3)
-  json<- gsub("\\\\","\\",json)
-  json<-str_replace_all(json,"u0022",'\\"')
+  json <- stringi::stri_unescape_unicode(json)
   data<-fromJSON(json)
   data<-data%>%unnest(c(participant, country))
   data$event_link<-i
@@ -149,8 +146,7 @@ for(i in by_year$event_link[by_year$year>=2004]){
     html_elements("table")%>%
     html_attr("x-data")
   json<-substr(table,19,nchar(table)-3)
-  json<- gsub("\\\\","\\",json)
-  json<-str_replace_all(json,"u0022",'\\"')
+  json <- stringi::stri_unescape_unicode(json)
   data<-fromJSON(json)
   data<-data%>%unnest(c(participant, country))
   data$event_link<-i
@@ -167,8 +163,7 @@ for(i in by_year$event_link[by_year$year<2004]){
     html_elements("table")%>%
     html_attr("x-data")
   json<-substr(table,19,nchar(table)-3)
-  json<- gsub("\\\\","\\",json)
-  json<-str_replace_all(json,"u0022",'\\"')
+  json <- stringi::stri_unescape_unicode(json)
   data<-fromJSON(json)
   data<-data%>%unnest(c(participant, country))
   data$event_link<-i
