@@ -28,6 +28,6 @@ Data is available [here](https://github.com/tashapiro/eurovision-contest/blob/ma
 | rank_ordinal        | Numeric rank, e.g. 2                                 |
 | rank_ordinal        | Ordinal rank, e.g. 2nd                               |
 | qualified           | Applicable to semi-final rounds only (TRUE or FALSE) |
-| winner              | Applicable to final rounds only (TRUE or FALSE)      |
+| winner              | Applicable to final & semi-final rounds (TRUE or FALSE)      |
 | partipant_link      | Link to participant bio                              |
 | event_link          | Link to event                                        |
